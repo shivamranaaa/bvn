@@ -29,3 +29,10 @@ from sklearn.linear_model import LogisticRegression
 # Step 3: Train logistic regression model
 model = LogisticRegression()
 model.fit(X_train, y_train)
+
+from sklearn.metrics import accuracy_score
+
+# Step 4: Predict and evaluate
+y_pred = model.predict(X_test)
+accuracy = accuracy_score(y_test, y_pred)
+print(f"Accuracy: {accuracy:.2f}")
