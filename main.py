@@ -36,3 +36,15 @@ from sklearn.metrics import accuracy_score
 y_pred = model.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 print(f"Accuracy: {accuracy:.2f}")
+
+
+import matplotlib.pyplot as plt
+
+# Step 5: Plot the test predictions
+plt.figure(figsize=(8, 6))
+plt.scatter(X_test[:, 0], X_test[:, 1], c=y_pred, cmap='bwr', edgecolor='k', marker='o')
+plt.title("Logistic Regression Classification")
+plt.xlabel("Feature 1")
+plt.ylabel("Feature 2")
+plt.grid(True)
+plt.show()
